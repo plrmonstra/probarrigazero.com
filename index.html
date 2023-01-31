@@ -34,15 +34,15 @@
     <header class="py-4">
       <div class="container">
         <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
+          <div class="col-lg-9 text-center">
             <!-- Imagem Ultrasecreto -->
-            <img class="img-fluid" src="./assets/img/ultrasecreto.svg">
+            <img class="img-fluid" src="./assets/img/ultrasecreto.svg" style="height: 60px;width: auto;">
 
             <!-- Headline -->
-            <h3 class="my-4"><b>Simples Vitamina de 6 Ingredientes Derrete Muita Gordura</b></h3>
+            <h3 class="my-4" style="font-size: 25px;"><b>Simples Vitamina de 6 Ingredientes Derrete Muita Gordura</b></h3>
 
             <!-- VSL -->
-            <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/790767933?h=442c6e7f30&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="VSL PT 97.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+            <div style="padding:50% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/790767933?h=442c6e7f30&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="VSL PT 97.mp4"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
             <!-- Botão -->
             <div id="cta1" class="mt-4 d-none">
@@ -60,12 +60,182 @@
     </header>
 
     <script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 0); // temporização da Call to Action (em milissegundos)
+      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 360000); // temporização da Call to Action (em milissegundos)
     </script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="./assets/js/com.js"></script>
+
+
+    <div class="modalzao" id="modalzao">        
+        <div class="modalcentro" id="modalcentro">            
+            <div class="modalcorpo mc" id="mcor">
+                <div class="modalfechar" onclick="modalFechar()">x</div>
+                <h1>ESPERE!</h1>
+                <h2>Em apenas 04:23...</h2>
+                <h3>Vou revelar minha fórmula tropical bizarra para queimar gordura a cada 24 horas!</h3>
+
+                <p>
+                  Isso fez com que Mônica Barretos, uma mãe de 44 anos e 2 filhos, de repente derretesse 39 kg de gordura grossa de sua bunda, quadris e rosto!
+                </p>
+
+               <a class="btn" onclick="modalFechar()">CONTINUE ASSISTINDO <br> PARA DESCOBRIR A FÓRMULA TROPICAL </a>
+               <p> Ou prefere ler?? Acesse e descubra o segredo pela <a href="/lp">página de texto aqui...</a></p>
+            </div>            
+        </div>
+    </div><!-- .modalzao -->
+    
+    <style>
+        
+        .modalfechar{
+            width: 20px;
+            height: 20px;
+            background-color: #333;
+            color: #FFF;
+            font-size: 12px;
+            border-radius: 50%;
+            line-height: 20px;
+            position: absolute;
+            right: -20px;
+            top: -20px;
+            cursor: pointer;
+        }
+    
+        .modalzao{
+          background-color: rgba(30,30,30,0.5);
+          position: fixed;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 9999;
+        }
+    
+        .modalcentro{
+          max-width: 900px;
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%,0);      
+          margin-top: 30px;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+    
+        #modalzao{
+          display: none;
+        }
+
+        .modalcorpo{
+          border: 5px solid red;
+          padding: 30px;
+          background-color: #FFF;
+          border-radius: 10px;
+          color: #000;
+        }
+
+        .mc h1{
+          color: red;
+        }
+        .mc h3{
+          color: #006467;
+          font-weight: bold;
+        }
+
+        .mc .btn{
+          background-color: yellow;
+          border-radius: 10px;
+          border: 3px solid blue;
+          color: blue!important;
+          font-size: 20px;
+          font-weight: bold;
+          display: inline-block;
+          padding: 10px 30px;
+          box-shadow: rgb(0 0 0 / 19%) 0 10px 20px, rgb(0 0 0 / 23%) 0 6px 6px;
+          transform: scale(1);
+          animation: pulsing 1s infinite;
+          margin-bottom: 30px;
+          cursor: pointer;
+        }
+
+        .mc p{
+          font-size: 20px;
+        }
+
+        @keyframes pulsing{
+            0%{
+                transform:scale(1);
+                box-shadow:0 0 0 0 rgba(0,0,0,.7)
+            }
+            70%{
+                transform:scale(1.034);
+                box-shadow:0 0 0 10px transparent
+            }
+            100%{
+                transform:scale(1);
+                box-shadow:0 0 0 0 transparent
+            }
+        }
+
+
+        /* responsivo */  
+          @media (min-width: 1400px)/* telas grandes */ { 
+          
+        
+          }  
+          @media (min-width: 1200px) and (max-width: 1399px)/* notebook */ { 
+          
+        
+          }
+          @media (min-width: 992px) and (max-width: 1199px)/* 1024 */ { 
+          
+        
+          }
+          @media (max-width: 991px)/* mobiles */ { 
+          
+        
+          }
+          @media (max-width: 767px) {
+        
+          }
+          @media (max-width: 481px) {
+        
+          }
+          @media (max-width: 361px) {
+        
+          }
+        /* /responsivo */
+        
+    
+   
+    
+    </style>
+    
+    <script>
+        function modalFechar(){
+            $('#modalzao').hide('fast');
+        }
+    
+        $(window).click(function() {
+            $('#modalzao').hide('fast');
+        });
+    
+        $('#modalcentro').click(function(event){
+            event.stopPropagation();
+        });
+    
+        function modalAbrir(){
+            $('#modalzao').css('display', 'block');
+        }
+        $(document).mouseleave(function () {
+              modalAbrir();
+        });
+    </script>
+
+    
+    
+
+
   </body>
 </html>
