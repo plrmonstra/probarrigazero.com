@@ -38,10 +38,24 @@
     src="https://www.facebook.com/tr?id=877826193502511&ev=PageView&noscript=1"
   /></noscript>
   <!-- End Meta Pixel Code -->
+
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KC65QWS');</script>
+  <!-- End Google Tag Manager -->
   
   
 </head>
 <body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KC65QWS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
   
   <section data-bs-version="5.1" class="video2 cid-ttRiQCo4xE mbr-parallax-background" id="video2-0">
     
@@ -582,7 +596,12 @@
                     <p class="mbr-description mbr-fonts-style mt-2 align-center display-4"></p>
                 </div>
                 <div class="text-center">
-                    <a class="btn btn-warning display-4" style="font-size: 24px; line-height: 1.1;" href="https://pay.kiwify.com.br/GpQxG8Y">Quero obter o Protocolo Zero Barriga e emagecer! <br>(clique aqui)</a>
+                    <br>
+                    <br>
+                    <a class="btn btn-success display-4" style="font-size: 24px; line-height: 1.1;" href="https://pay.kiwify.com.br/GpQxG8Y" id="btncompra">Quero Adquirir! (clique)</a>
+                    <br>
+                    <br>
+                    <br>
                 </div><!-- /.text-center -->
             </div>
         </div>
@@ -616,7 +635,7 @@
                   O Protocolo Barriga Zero fez com que Mônica Barretos, uma mãe de 44 anos e 2 filhos, de repente derretesse 23 kg de gordura grossa de sua bunda, quadris e rosto!
                 </p>
 
-               <a class="btn" href="#comprar" onclick="modalfechar()">QUERO VER O BÔNUS E OBTER DESCONTO</a>
+               <a class="btn" href="#comprar" id="verbonus">QUERO VER O BÔNUS E OBTER DESCONTO</a>
                
             </div>            
         </div>
@@ -794,10 +813,26 @@
         });
     
         function modalAbrir(){
-            $('#modalzao').css('display', 'block');
+            a = $('#modalzao').attr('data-fechado');
+            if(a == ''){
+                $('#modalzao').css('display', 'block');
+            }
         }
         $(document).mouseleave(function () {
               modalAbrir();
+        });
+    </script>
+
+    <script>
+        $('#btncompra').click(function(event) {
+            fbq('track', 'AddToCart');
+        });
+    </script>
+
+    <script>
+        $('#verbonus').click(function(event) {
+            modalFechar();
+            $('#modalzao').attr('data-fechado', 'sim');
         });
     </script>
 
