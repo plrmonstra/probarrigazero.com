@@ -10,6 +10,7 @@ $(document).ready(function() {
         if (answer) {
           current_question += 1;
           console.log(current_question);
+          updateProgressBar(current_question,5)
           
           if (current_question <= $('.question').length) {
             $('.question').hide();
@@ -37,20 +38,16 @@ $(document).ready(function() {
               score += 1;
             }
             
-            var result_text = '';
+       
             
-            if (score == 0) {
-              result_text = 'Você não tem um perfil de risco para distúrbios alimentares.';
-            } else if (score == 1) {
-              result_text = 'Você tem um perfil de risco moderado para distúrbios alimentares. Procure ajuda.';
-            } else if (score == 2) {
-              result_text = 'Você tem um perfil de risco alto para distúrbios alimentares. Procure ajuda imediatamente.';
-            } else if (score == 3 || score == 4) {
-              result_text = 'Você tem um perfil de risco muito alto para distúrbios alimentares. Procure ajuda imediatamente'
-            }
+            
 
             $('#result').css('display', 'block')
             $('#q4').css('display', 'none')
+
+            setTimeout(function() {
+                window.location.href = "https://probarrigazero.com/lp";
+            }, 7000); // 10 seconds in milliseconds
 
           }
 
@@ -63,3 +60,11 @@ $(document).ready(function() {
 
     });
 });
+
+
+function updateProgressBar(currentStep, totalSteps) {
+  var percentComplete = Math.round((currentStep / totalSteps) * 100);
+  $('#progress-bar').animate({
+      width: percentComplete + '%',      
+    }, 200); // 1 second animation
+}
